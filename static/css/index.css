@@ -237,6 +237,107 @@ body {
     color: var(--primary-hover) !important;
 }
 
+/* Team Members Grid Layout */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.team-member {
+  flex: 0 0 auto;
+  width: 280px;
+  text-align: center;
+}
+
+.pi-member {
+  width: 320px;
+}
+
+.team-box {
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.pi-member .team-box {
+  min-height: 280px;
+}
+
+.team-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-box figure {
+  margin-bottom: 1rem;
+}
+
+.team-box .title {
+  margin-bottom: 1rem !important;
+  flex-grow: 0;
+}
+
+.team-box .subtitle {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+  flex-grow: 0;
+}
+
+.pi-subtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Responsive adjustments for team grid */
+@media screen and (max-width: 768px) {
+  .team-grid {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  
+  .team-member {
+    width: 260px;
+  }
+  
+  .pi-member {
+    width: 280px;
+  }
+  
+  .team-box {
+    min-height: 300px;
+    padding: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-grid {
+    padding: 0 0.5rem;
+    gap: 0.75rem;
+  }
+  
+  .team-member {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .pi-member {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+
 .publication-banner img {
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
