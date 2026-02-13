@@ -210,3 +210,85 @@ function copyBibTeXContent(bibtexCodeId) {
         });
     }
 }
+
+// Image Modal Functions
+let currentZoom = 1;
+const zoomStep = 0.2;
+const minZoom = 0.5;
+const maxZoom = 3;
+
+function openImageModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const zoomControls = document.getElementById('zoomControls');
+    modalImage.src = imageSrc;
+    currentZoom = 1;
+    modalImage.style.transform = `scale(${currentZoom})`;
+    updateZoomLevel();
+    modal.classList.add('is-active');
+    zoomControls.style.display = 'block';
+    document.documentElement.classList.add('is-clipped');
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    const zoomControls = document.getElementById('zoomControls');
+    modal.classList.remove('is-active');
+    zoomControls.style.display = 'none';
+    document.documentElement.classList.remove('is-clipped');
+    currentZoom = 1;
+}
+
+function zoomIn() {
+    if (currentZoom < maxZoom) {
+        currentZoom += zoomStep;
+        applyZoom();
+    }
+}
+
+function zoomOut() {
+    if (currentZoom > minZoom) {
+        currentZoom -= zoomStep;
+        applyZoom();
+    }
+}
+
+function resetZoom() {
+    currentZoom = 1;
+    applyZoom();
+}
+
+function applyZoom() {
+    const modalImage = document.getElementById('modalImage');
+    modalImage.style.transform = `scale(${currentZoom})`;
+    updateZoomLevel();
+}
+
+function updateZoomLevel() {
+    const zoomLevel = document.getElementById('zoomLevel');
+    zoomLevel.textContent = Math.round(currentZoom * 100) + '%';
+}
+
+// Mouse wheel zoom
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.addEventListener('wheel', function(e) {
+            if (modal.classList.contains('is-active')) {
+                e.preventDefault();
+                if (e.deltaY < 0) {
+                    zoomIn();
+                } else {
+                    zoomOut();
+                }
+            }
+        }, { passive: false });
+    }
+});
+
+// Close modal on escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
+    }
+});

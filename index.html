@@ -215,6 +215,15 @@
                   </a>
                 </span>
 
+                <span class="link-block">
+                  <a href="#others" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </span>
+                    <span>Others</span>
+                  </a>
+                </span>
+
                 <!-- <span class="link-block">
                   <a href="https://github.com/YOUR_ORG_HERE" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -708,6 +717,69 @@
 </section>
 <!-- End Team Members Section -->
 
+<!-- Others Section -->
+<section class="section" id="others">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Others</h2>
+    
+    <!-- Social Media Coverage -->
+    <div class="box">
+      <h3 class="title is-4"> Media Coverage</h3>
+      <div class="columns">
+        <div class="column is-half">
+          <figure class="image">
+            <img src="static/images/dung-duy-le-dan-tri.webp" style="width: 100%; height: auto; border-radius: 8px; cursor: pointer;" onclick="openImageModal('static/images/dung-duy-le-dan-tri.webp')" alt="Prof. Dung's interview with Dan Tri">
+          </figure>
+
+        </div>
+        <div class="column">
+          <div class="content">
+            <p>
+              Prof. Dung's interview with Vietnamese media site Dan Tri.
+            </p>
+            <a href="https://dantri.com.vn/khoa-hoc/tri-tue-viet-tim-ra-vat-lieu-moi-ke-thua-tinh-hoa-cua-chu-nhan-giai-nobel-20251224121734163.htm" target="_blank" class="button is-link is-light">
+              <span class="icon">
+                <i class="fas fa-newspaper"></i>
+              </span>
+              <span>View article</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application: Real-Time Speech Translation -->
+    <div class="box">
+      <h3 class="title is-4">Vietnamese-English Real Time Medical Speech Translation Prototype</h3>
+      <div class="content">
+        <p>
+          We are developing a real-time Vietnamese-English speech translation prototype for medical applications.
+        </p>
+        <p>
+          <span class="tag is-warning is-medium">
+            <span class="icon">
+              <i class="fas fa-clock"></i>
+            </span>
+            <span>Coming Soon</span>
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Lecture -->
+    <div class="box">
+      <h3 class="title is-4">Guest Lecture on Introduction to Machine Translation at VinUni</h3>
+      <div class="content">
+        <p>
+          Our researcher gave a guest lecture introducing students to the theoretical foundations and practical applications of MT systems.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Others Section -->
+
 <!-- Collaborators Section -->
 <!-- <section class="section" id="collaborators">
   <div class="container is-max-desktop">
@@ -797,6 +869,30 @@
 </section> -->
 <!--End BibTex citation -->
 
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <div class="modal-background" onclick="closeImageModal()"></div>
+    <div class="modal-content" style="width: 90vw; height: 90vh; display: flex; align-items: center; justify-content: center; overflow: auto;">
+      <div style="max-width: 100%; max-height: 100%; display: flex; align-items: center; justify-content: center;">
+        <img id="modalImage" src="" alt="Enlarged image" style="max-width: 100%; max-height: 90vh; width: auto; height: auto; cursor: grab; transition: transform 0.2s ease; object-fit: contain;">
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close" onclick="closeImageModal()"></button>
+    <!-- Zoom Controls -->
+    <div style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 9999; background: rgba(0,0,0,0.7); padding: 10px 20px; border-radius: 30px; display: none;" id="zoomControls">
+      <button onclick="zoomOut()" class="button is-dark is-small" style="margin-right: 10px;">
+        <span class="icon"><i class="fas fa-minus"></i></span>
+      </button>
+      <span id="zoomLevel" style="color: white; margin: 0 15px; font-weight: bold;">100%</span>
+      <button onclick="zoomIn()" class="button is-dark is-small" style="margin-left: 10px;">
+        <span class="icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <button onclick="resetZoom()" class="button is-dark is-small" style="margin-left: 15px;">
+        <span class="icon"><i class="fas fa-undo"></i></span>
+      </button>
+    </div>
+  </div>
 
   <footer class="footer">
   <div class="container">
