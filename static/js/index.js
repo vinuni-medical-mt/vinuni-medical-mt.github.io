@@ -140,3 +140,51 @@ $(document).ready(function() {
     setupVideoCarouselAutoplay();
 
 })
+
+// Toggle BibTeX visibility for specific paper
+function toggleBibTeX(bibtexId) {
+    const bibtexContainer = document.getElementById(bibtexId);
+    if (bibtexContainer) {
+        if (bibtexContainer.style.display === 'none') {
+            bibtexContainer.style.display = 'block';
+        } else {
+            bibtexContainer.style.display = 'none';
+        }
+    }
+}
+
+// Copy BibTeX content for specific paper
+function copyBibTeXContent(bibtexCodeId) {
+    const bibtexElement = document.getElementById(bibtexCodeId);
+    const button = event.target.closest('.copy-bibtex-btn');
+    const copyText = button.querySelector('.copy-text');
+    
+    if (bibtexElement) {
+        navigator.clipboard.writeText(bibtexElement.textContent).then(function() {
+            // Success feedback
+            button.classList.add('copied');
+            copyText.textContent = 'Copied!';
+            
+            setTimeout(function() {
+                button.classList.remove('copied');
+                copyText.textContent = 'Copy';
+            }, 2000);
+        }).catch(function(err) {
+            console.error('Failed to copy: ', err);
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea');
+            textArea.value = bibtexElement.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            button.classList.add('copied');
+            copyText.textContent = 'Copied!';
+            setTimeout(function() {
+                button.classList.remove('copied');
+                copyText.textContent = 'Copy';
+            }, 2000);
+        });
+    }
+}

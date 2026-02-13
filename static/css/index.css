@@ -205,6 +205,38 @@ body {
   margin-right: 0.5rem;
 }
 
+/* Team member and collaborator link styles */
+#team .author-block a,
+#collaborators .author-block a {
+   color: var(--primary-color) !important;
+   text-decoration: none;
+   font-weight: 600;
+   transition: var(--transition);
+   position: relative;
+}
+
+#team .author-block a::after,
+#collaborators .author-block a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--gradient-accent);
+    transition: var(--transition);
+}
+
+#team .author-block a:hover::after,
+#collaborators .author-block a:hover::after {
+    width: 100%;
+}
+
+#team .author-block a:hover,
+#collaborators .author-block a:hover {
+    color: var(--primary-hover) !important;
+}
+
 .publication-banner img {
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
@@ -214,6 +246,16 @@ body {
 .publication-banner img:hover {
   transform: scale(1.02);
   box-shadow: var(--shadow-xl);
+}
+
+/* Publication buttons styling */
+#publications .buttons {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#publications .buttons .button {
+  margin: 0.25rem;
 }
 
 /* Modern Video and Carousel Styling */
@@ -382,6 +424,27 @@ code {
 }
 
 /* BibTeX Section Improvements */
+.bibtex-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--background-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.bibtex-container pre {
+  margin: 0;
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.bibtex-container code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
 .bibtex-header {
   display: flex;
   justify-content: space-between;
