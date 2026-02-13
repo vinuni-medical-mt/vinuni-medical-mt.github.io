@@ -153,6 +153,28 @@ function toggleBibTeX(bibtexId) {
     }
 }
 
+// Toggle paper description visibility
+function toggleDescription(descriptionId) {
+    const descContainer = document.getElementById(descriptionId);
+    const button = event.target.closest('button');
+    const icon = button.querySelector('i');
+    const toggleText = button.querySelector('.toggle-text');
+    
+    if (descContainer) {
+        if (descContainer.style.display === 'none') {
+            descContainer.style.display = 'block';
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+            toggleText.textContent = 'Hide Abstract';
+        } else {
+            descContainer.style.display = 'none';
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+            toggleText.textContent = 'Show Abstract';
+        }
+    }
+}
+
 // Copy BibTeX content for specific paper
 function copyBibTeXContent(bibtexCodeId) {
     const bibtexElement = document.getElementById(bibtexCodeId);
