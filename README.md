@@ -1,77 +1,84 @@
-# Academic Project Page Template
+# VinUniversity Medical Machine Translation Research Project
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+This repository hosts the project website for the VinUniversity Medical Machine Translation Research Project, focusing on advancing Vietnamese-English translation for medical texts and speech.
 
-A clean, responsive template for academic project pages.
+## About the Project
 
+We are a collaborative research initiative at VinUniversity (Vietnam) addressing the critical need for accurate Vietnamese-English translation in both clinical and educational medical contexts. Our work bridges language barriers in healthcare and medical education through cutting-edge machine translation and speech recognition technologies.
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+### Participating Institutions
+- [College of Engineering and Computer Science (CECS)](https://cecs.vinuni.edu.vn/)
+- [College of Health Sciences (CHS)](https://chs.vinuni.edu.vn/)
+- [Center for AI Research (CAIR)](https://cair.vinuni.edu.vn/)
 
+## Published Works
 
+### 1. MedEV Dataset
+**Improving Vietnamese-English Medical Machine Translation** (LREC-COLING 2024)
 
-## Start using the template
-To start using the template click on `Use this Template`.
+A high-quality Vietnamese-English parallel dataset specifically constructed for the medical domain, comprising approximately 360K sentence pairs.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+- 📄 [Paper](https://aclanthology.org/2024.lrec-main.784/)
+- 📊 [Dataset on HuggingFace](https://huggingface.co/datasets/nhuvo/MedEV)
+- 📝 [arXiv](https://arxiv.org/abs/2403.19161)
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+### 2. ViMedCSS Dataset
+**ViMedCSS: A Vietnamese Medical Code-Switching Speech Dataset & Benchmark** (LREC 2026)
 
-## What's New
+A 34-hour Vietnamese Medical Code-Switching Speech dataset containing 16,576 utterances, addressing the challenge of recognizing English medical terms within Vietnamese speech.
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+- 📊 [Dataset on HuggingFace](https://huggingface.co/datasets/tensorxt/ViMedCSS)
 
-## Components
+## Team
 
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
+### Principal Investigators
+- **Asst. Prof. Dung D. Le** - Project PI
+- **Prof. Wray Buntine** - Project PI
 
-## Customization
+### Researchers
+- **Nhu Vo, MSc** - PhD Student @ VinUni & UTS, Vingroup Scholar
+- **Tung X. Nguyen** - Research Assistant, MSc CS Student @ VinUni
+- **Giang Son Nguyen, MSc** - Research Assistant
+- **Kim-Phuong Nguyen** - Research Assistant @ VinUni
+- And more team members...
 
-The HTML file has TODO comments showing what to replace:
+## Website
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+Visit our project website: [https://vinuni-medical-mt.github.io/](https://vinuni-medical-mt.github.io/)
 
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
+## Repository Structure
 
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
+```
+.
+├── index.html                  # Main website file
+├── README.md                   # This file
+└── static/
+    ├── css/                    # Stylesheets
+    ├── images/                 # Images and logos
+    ├── js/                     # JavaScript files
+    ├── pdfs/                   # PDF documents
+    └── videos/                 # Video files
+```
 
-## Tips
+## Local Development
 
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
+To view the website locally:
+
+1. Clone this repository
+2. Open `index.html` in a web browser, or
+3. Use a local server (e.g., `python -m http.server` or `npx serve`)
+
+## Technologies Used
+
+- HTML5
+- CSS3 (Bulma framework)
+- JavaScript
+- Font Awesome icons
+- Academicons
+
+## Contact
+
+For more information about the project, please visit our website or contact the principal investigators through VinUniversity
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
