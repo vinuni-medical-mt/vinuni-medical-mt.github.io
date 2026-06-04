@@ -262,8 +262,10 @@
           <p>
             Check out our published works:
             <ul>
+              <li><a href="#paper-pida" style="color: #3273dc; font-weight: 600; text-decoration: underline;">PiDA</a> (Interspeech '26) – Phonetically-informed data augmentation for robust Vietnamese speech translation</li>
+              <li><a href="#paper-near-misses" style="color: #3273dc; font-weight: 600; text-decoration: underline;">LLM-generated near-misses</a> (Interspeech '26) – Contrastive training for robust code-switching speech recognition</li>
+              <li><a href="#paper-vimedcss" style="color: #3273dc; font-weight: 600; text-decoration: underline;">ViMedCSS dataset</a> (LREC '26) – Vietnamese Medical Code-Switching Speech dataset &amp; benchmark</li>
               <li><a href="#paper-medev" style="color: #3273dc; font-weight: 600; text-decoration: underline;">MedEV dataset</a> (LREC-COLING '24) – Vietnamese-English parallel dataset for medical machine translation</li>
-              <li><a href="#paper-vimedcss" style="color: #3273dc; font-weight: 600; text-decoration: underline;">ViMedCSS dataset</a> (LREC '26) – Vietnamese Medical Code-Switching Speech dataset & benchmark</li>
             </ul>
           </p>
         </div>
@@ -279,6 +281,118 @@
     <h2 class="title is-3 has-text-centered">Publications & Datasets</h2>
     
     <!-- Paper 1 -->
+    <div class="box" id="paper-pida">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <h3 class="title is-4">PiDA: Phonetically-Informed Data Augmentation for Robust Vietnamese Speech Translation</h3>
+          <p class="subtitle is-6">
+            <strong>Authors:</strong> Giang Son Nguyen, Tung X. Nguyen, Hieu Minh Truong, Nhu Vo, Wray Buntine, Dung D. Le<br>
+            <strong>Conference:</strong> Interspeech 2026
+          </p>
+          <button class="button is-small is-link is-light" onclick="toggleDescription('description-paper1')" style="margin-bottom: 0.5rem;">
+            <span class="icon is-small"><i class="fas fa-chevron-down"></i></span>
+            <span class="toggle-text">Show Abstract</span>
+          </button>
+          <div id="description-paper1" class="description-container" style="display: none;">
+          <p class="content">
+            Cascaded speech translation (ST) systems suffer from error propagation when Automatic Speech Recognition (ASR) outputs incorrect transcripts. We present the first systematic categorization of ASR errors for Vietnamese ST, classifying substitution errors by phonetic cause and quantifying their impact on downstream Neural Machine Translation (NMT) performance using Linear Mixed-Effects Modelling. We confirm that most ASR substitution errors arise from phonetic confusions rather than random noise, and that these phonetic errors significantly degrade ST quality. Motivated by this finding, we propose Phonetically-Informed Data Augmentation (PiDA), which generates ASR-like corruptions by substituting words with phonetically similar alternatives using phonetic word embeddings. Fine-tuning on a PiDA-augmented version of FLEURS Vietnamese-English improves translation of erroneous ASR outputs (up to +2.04 BLEU over standard fine-tuning) while also slightly improving clean-text performance.
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper 2 -->
+    <div class="box" id="paper-near-misses">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <h3 class="title is-4">Contrastive Training with LLM-generated Near-Misses for Robust Code-Switching Speech Recognition</h3>
+          <p class="subtitle is-6">
+            <strong>Authors:</strong> Tung X. Nguyen, Hieu Minh Truong, Giang Son Nguyen, Nhu Vo, Wray Buntine, Dung D. Le<br>
+            <strong>Conference:</strong> Interspeech 2026
+          </p>
+          <button class="button is-small is-link is-light" onclick="toggleDescription('description-paper2')" style="margin-bottom: 0.5rem;">
+            <span class="icon is-small"><i class="fas fa-chevron-down"></i></span>
+            <span class="toggle-text">Show Abstract</span>
+          </button>
+          <div id="description-paper2" class="description-container" style="display: none;">
+          <p class="content">
+            Code-switching (CS), the alternation between multiple languages within a single utterance, remains challenging for Automatic Speech Recognition (ASR). To address this issue, we propose a Point-of-Interest (POI)-aware contrastive training framework that improves recognition at CS-critical regions. We first identify CS spans by adopting POI detection method from literature, then construct acoustically plausible near-miss hypotheses by perturbing POIs in ASR N-best outputs and expanding candidates with a large language model. Hard but plausible negatives are retained through filtering with acoustic, phonemic, and textual constraints. Finally, we fine-tune Whisper-small with LoRA using a POI-weighted cross-entropy anchor objective together with a multi-negative contrastive ranking loss. Experiments on CS-FLEURS (cmn-eng) and ViMedCSS (vie-eng) show consistent reductions of over 2% in both general and CS-aware error rates compared to standard LoRA fine-tuning.
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper 3 -->
+    <div class="box" id="paper-vimedcss">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <h3 class="title is-4">ViMedCSS: A Vietnamese Medical Code-Switching Speech Dataset &amp; Benchmark</h3>
+          <p class="subtitle is-6">
+            <strong>Authors:</strong> Tung X. Nguyen, Nhu Vo, Giang Son Nguyen, Duy Mai Hoang, Chien Dinh Huynh, Iñigo Jauregi Unanue, Massimo Piccardi, Wray Buntine, Dung D. Le<br>
+            <strong>Conference:</strong> LREC 2026
+          </p>
+          <button class="button is-small is-link is-light" onclick="toggleDescription('description-paper3')" style="margin-bottom: 0.5rem;">
+            <span class="icon is-small"><i class="fas fa-chevron-down"></i></span>
+            <span class="toggle-text">Show Abstract</span>
+          </button>
+          <div id="description-paper3" class="description-container" style="display: none;">
+          <p class="content">
+            Code-switching (CS), which is when Vietnamese speech uses English words like drug names or procedures, is a common phenomenon in Vietnamese medical communication. This creates challenges for Automatic Speech Recognition (ASR) systems, especially in low-resource languages like Vietnamese. Current most ASR systems struggle to recognize correctly English medical terms within Vietnamese sentences, and no benchmark addresses this challenge. In this paper, we construct a 34-hour Vietnamese Medical Code-Switching Speech dataset (ViMedCSS) containing 16,576 utterances. Each utterance includes at least one English medical term drawn from a curated bilingual lexicon covering five medical topics. Using this dataset, we evaluate several state-of-the-art ASR models and examine different specific fine-tuning strategies for improving medical term recognition to investigate the best approach to solve in the dataset. Experimental results show that Vietnamese-optimized models perform better on general segments, while multilingual pretraining helps capture English insertions. The combination of both approaches yields the best balance between overall and code-switched accuracy. This work provides the first benchmark for Vietnamese medical code-switching and offers insights into effective domain adaptation for low-resource, multilingual ASR systems.
+          </p>
+          </div>
+        </div>
+        <div class="column">
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div class="buttons is-centered" style="margin-bottom: 0;">
+            <a href="#" target="_blank" class="button is-primary">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Paper</span>
+            </a>
+            <a href="#" target="_blank" class="button is-warning">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+            </div>
+            <div class="buttons is-centered" style="margin-bottom: 0;">
+            <a href="https://huggingface.co/datasets/tensorxt/ViMedCSS" target="_blank" class="button is-info">
+              <span class="icon"><i class="fas fa-database"></i></span>
+              <span>Dataset</span>
+            </a>
+            <button class="button is-dark" onclick="toggleBibTeX('bibtex-paper3')">
+              <span class="icon"><i class="fas fa-quote-right"></i></span>
+              <span>BibTeX</span>
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="bibtex-paper3" class="bibtex-container" style="display: none;">
+        <div class="bibtex-header">
+          <button class="copy-bibtex-btn" onclick="copyBibTeXContent('bibtex-paper3-code')" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-paper3-code"><code>@inproceedings{nguyen-etal-2026-vimedcss,
+    title = "{V}i{M}ed{CSS}: A Vietnamese Medical Code-Switching Speech Dataset \& Benchmark",
+    author = "Nguyen, Tung X.  and
+      Vo, Nhu  and
+      Nguyen, Giang Son  and
+      Hoang, Duy Mai  and
+      Huynh, Chien Dinh  and
+      Unanue, I{\~n}igo Jauregi  and
+      Piccardi, Massimo  and
+      Buntine, Wray  and
+      Le, Dung D.",
+    booktitle = "Proceedings of the 2026 Language Resources and Evaluation Conference (LREC 2026)",
+    year = "2026",
+}</code></pre>
+      </div>
+    </div>
+
+    <!-- Paper 4 -->
     <div class="box" id="paper-medev">
       <div class="columns">
         <div class="column is-three-quarters">
@@ -287,11 +401,11 @@
             <strong>Authors:</strong> Nhu Vo, Dat Quoc Nguyen, Dung D. Le, Massimo Piccardi, Wray Buntine<br>
             <strong>Conference:</strong> LREC-COLING 2024
           </p>
-          <button class="button is-small is-link is-light" onclick="toggleDescription('description-paper1')" style="margin-bottom: 0.5rem;">
+          <button class="button is-small is-link is-light" onclick="toggleDescription('description-paper4')" style="margin-bottom: 0.5rem;">
             <span class="icon is-small"><i class="fas fa-chevron-down"></i></span>
             <span class="toggle-text">Show Abstract</span>
           </button>
-          <div id="description-paper1" class="description-container" style="display: none;">
+          <div id="description-paper4" class="description-container" style="display: none;">
           <p class="content">
             Machine translation for Vietnamese-English in the medical domain is still an under-explored research area. In this paper, we introduce MedEV—a high-quality Vietnamese-English parallel dataset constructed specifically for the medical domain, comprising approximately 360K sentence pairs. We conduct extensive experiments comparing Google Translate, ChatGPT (gpt-3.5-turbo), state-of-the-art Vietnamese-English neural machine translation models and pre-trained bilingual/multilingual sequence-to-sequence models on our new MedEV dataset. Experimental results show that the best performance is achieved by fine-tuning "vinai-translate" for each translation direction. We publicly release our dataset to promote further research.
           </p>
@@ -314,7 +428,7 @@
               <span class="icon"><i class="fas fa-database"></i></span>
               <span>Dataset</span>
             </a>
-            <button class="button is-dark" onclick="toggleBibTeX('bibtex-paper1')">
+            <button class="button is-dark" onclick="toggleBibTeX('bibtex-paper4')">
               <span class="icon"><i class="fas fa-quote-right"></i></span>
               <span>BibTeX</span>
             </button>
@@ -322,14 +436,14 @@
           </div>
         </div>
       </div>
-      <div id="bibtex-paper1" class="bibtex-container" style="display: none;">
+      <div id="bibtex-paper4" class="bibtex-container" style="display: none;">
         <div class="bibtex-header">
-          <button class="copy-bibtex-btn" onclick="copyBibTeXContent('bibtex-paper1-code')" title="Copy BibTeX to clipboard">
+          <button class="copy-bibtex-btn" onclick="copyBibTeXContent('bibtex-paper4-code')" title="Copy BibTeX to clipboard">
             <i class="fas fa-copy"></i>
             <span class="copy-text">Copy</span>
           </button>
         </div>
-        <pre id="bibtex-paper1-code"><code>@inproceedings{vo-etal-2024-improving,
+        <pre id="bibtex-paper4-code"><code>@inproceedings{vo-etal-2024-improving,
     title = "Improving {V}ietnamese-{E}nglish Medical Machine Translation",
     author = "Vo, Nhu  and
       Nguyen, Dat Quoc  and
@@ -343,74 +457,6 @@
     publisher = "ELRA and ICCL",
     url = "https://aclanthology.org/2024.lrec-main.784/",
     pages = "8955--8962",
-}</code></pre>
-      </div>
-    </div>
-
-    <!-- Paper 2 - Template -->
-    <div class="box" id="paper-vimedcss">
-      <div class="columns">
-        <div class="column is-three-quarters">
-          <h3 class="title is-4">ViMedCSS: A Vietnamese Medical Code-Switching Speech Dataset & Benchmark</h3>
-          <p class="subtitle is-6">
-            <strong>Authors:</strong> Tung X. Nguyen, Nhu Vo, Giang Son Nguyen, Duy Mai Hoang, Chien Dinh Huynh, Iñigo Jauregi Unanue, Massimo Piccardi, Wray Buntine, Dung D. Le<br>
-            <strong>Conference:</strong> LREC 2026
-          </p>
-          <button class="button is-small is-link is-light" onclick="toggleDescription('description-paper2')" style="margin-bottom: 0.5rem;">
-            <span class="icon is-small"><i class="fas fa-chevron-down"></i></span>
-            <span class="toggle-text">Show Abstract</span>
-          </button>
-          <div id="description-paper2" class="description-container" style="display: none;">
-          <p class="content">
-            Code-switching (CS), which is when Vietnamese speech uses English words like drug names or procedures, is a common phenomenon in Vietnamese medical communication. This creates challenges for Automatic Speech Recognition (ASR) systems, especially in low-resource languages like Vietnamese. Current most ASR systems struggle to recognize correctly English medical terms within Vietnamese sentences, and no benchmark addresses this challenge. In this paper, we construct a 34-hour Vietnamese Medical Code-Switching Speech dataset (ViMedCSS) containing 16,576 utterances. Each utterance includes at least one English medical term drawn from a curated bilingual lexicon covering five medical topics. Using this dataset, we evaluate several state-of-the-art ASR models and examine different specific fine-tuning strategies for improving medical term recognition to investigate the best approach to solve in the dataset. Experimental results show that Vietnamese-optimized models perform better on general segments, while multilingual pretraining helps capture English insertions. The combination of both approaches yields the best balance between overall and code-switched accuracy. This work provides the first benchmark for Vietnamese medical code-switching and offers insights into effective domain adaptation for low-resource, multilingual ASR systems. 
-          </p>
-          </div>
-        </div>
-        <div class="column">
-          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-            <div class="buttons is-centered" style="margin-bottom: 0;">
-            <a href="#" target="_blank" class="button is-primary">
-              <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>Paper</span>
-            </a>
-            <a href="#" target="_blank" class="button is-warning">
-              <span class="icon"><i class="ai ai-arxiv"></i></span>
-              <span>arXiv</span>
-            </a>
-            </div>
-            <div class="buttons is-centered" style="margin-bottom: 0;">
-            <a href="https://huggingface.co/datasets/tensorxt/ViMedCSS" target="_blank" class="button is-info">
-              <span class="icon"><i class="fas fa-database"></i></span>
-              <span>Dataset</span>
-            </a>
-            <button class="button is-dark" onclick="toggleBibTeX('bibtex-paper2')">
-              <span class="icon"><i class="fas fa-quote-right"></i></span>
-              <span>BibTeX</span>
-            </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="bibtex-paper2" class="bibtex-container" style="display: none;">
-        <div class="bibtex-header">
-          <button class="copy-bibtex-btn" onclick="copyBibTeXContent('bibtex-paper2-code')" title="Copy BibTeX to clipboard">
-            <i class="fas fa-copy"></i>
-            <span class="copy-text">Copy</span>
-          </button>
-        </div>
-        <pre id="bibtex-paper2-code"><code>@inproceedings{nguyen-etal-2026-vimedcss,
-    title = "{V}i{M}ed{CSS}: A Vietnamese Medical Code-Switching Speech Dataset \& Benchmark",
-    author = "Nguyen, Tung X.  and
-      Vo, Nhu  and
-      Nguyen, Giang Son  and
-      Hoang, Duy Mai  and
-      Huynh, Chien Dinh  and
-      Unanue, I{\~n}igo Jauregi  and
-      Piccardi, Massimo  and
-      Buntine, Wray  and
-      Le, Dung D.",
-    booktitle = "Proceedings of the 2026 Language Resources and Evaluation Conference (LREC 2026)",
-    year = "2026",
 }</code></pre>
       </div>
     </div>
