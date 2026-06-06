@@ -236,50 +236,6 @@ body {
   padding: 0.05rem 0.28rem;
 }
 
-.qr-section {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.qr-callout {
-  align-items: center;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(194, 123, 20, 0.25);
-  border-radius: 12px;
-  box-shadow: 0 10px 22px -18px rgb(124 58 18 / 0.35);
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  margin-top: 1rem;
-  padding: 0.7rem 0.75rem 0.65rem;
-  text-decoration: none;
-  width: 208px;
-}
-
-.qr-callout img {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-
-.qr-callout span {
-  color: var(--text-secondary);
-  font-size: 0.86rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.qr-url {
-  color: var(--text-light) !important;
-  font-size: 0.72rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0;
-  text-transform: none !important;
-  word-break: break-word;
-}
-
 .publication-venue {
     color: var(--text-secondary);
     width: fit-content;
@@ -922,10 +878,6 @@ code {
     font-size: 0.9rem;
   }
 
-  .qr-section {
-    margin-top: 0.25rem;
-  }
-
   .button {
     margin: 0.25rem !important;
     font-size: 0.875rem !important;
@@ -979,15 +931,6 @@ code {
     flex-direction: column;
     gap: 0.45rem;
     width: 100%;
-  }
-
-  .qr-section {
-    margin-top: 0.5rem;
-  }
-
-  .qr-callout {
-    margin: 1rem auto 0;
-    width: 180px;
   }
   
   .hero-body {
