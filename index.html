@@ -323,6 +323,37 @@
           </p>
           </div>
         </div>
+        <div class="column">
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div class="buttons is-centered" style="margin-bottom: 0;">
+              <a href="https://arxiv.org/abs/2606.06985" target="_blank" class="button is-warning">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+              <button class="button is-dark" onclick="toggleBibTeX('bibtex-paper2')">
+                <span class="icon"><i class="fas fa-quote-right"></i></span>
+                <span>BibTeX</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="bibtex-paper2" class="bibtex-container" style="display: none;">
+        <div class="bibtex-header">
+          <button class="copy-bibtex-btn" onclick="copyBibTeXContent('bibtex-paper2-code')" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-paper2-code"><code>@misc{nguyen2026contrastivetrainingllmgeneratednearmisses,
+    title = {Contrastive Training with LLM-generated Near-Misses for Robust Code-Switching Speech Recognition},
+    author = {Nguyen, Tung X. and Truong, Hieu Minh and Nguyen, Giang Son and Vo, Nhu and Buntine, Wray and Le, Dung D.},
+    year = {2026},
+    eprint = {2606.06985},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.CL},
+    url = {https://arxiv.org/abs/2606.06985},
+}</code></pre>
       </div>
     </div>
 
