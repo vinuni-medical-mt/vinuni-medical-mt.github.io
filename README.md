@@ -36,11 +36,16 @@ A 34-hour Vietnamese Medical Code-Switching Speech dataset containing 16,576 utt
 - **Prof. Wray Buntine** - Project PI
 
 ### Researchers
-- **Nhu Vo, MSc** - PhD Student @ VinUni & UTS, Vingroup Scholar
-- **Tung X. Nguyen** - Research Assistant, MSc CS Student @ VinUni
-- **Giang Son Nguyen, MSc** - Research Assistant
+- **Nhu Vo, MSc** - Now: PhD Student @ VinUni & UTS, Vingroup Scholar
+- **Tung X. Nguyen** - MSc CS Student @ VinUni
+- **Giang Son Nguyen, MSc** - Now: PhD Student @ NTU; Prev: RA @ VinUni
+- **Nu-Uyen-Phuong Le, MSc** - Now: PhD Student @ UQ; Prev: RA @ VinUni
 - **Kim-Phuong Nguyen** - Research Assistant @ VinUni
 - And more team members...
+
+### Collaborators
+- **Nhi Ngoc-Yen Nguyen** - Research Intern @ USTC; Prev: Research Intern @ VinUni
+- **Minh Binh Vu** - MSc Graduate @ UC Berkeley; Prev: BSc CS @ VinUni
 
 ## Website
 
