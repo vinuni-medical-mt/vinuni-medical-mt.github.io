@@ -236,6 +236,7 @@
               <div class="latest-publication" aria-label="Latest news">
                 <div class="latest-label">News</div>
                 <div class="news-items">
+                  <p><time datetime="2026-08">08/2026</time>: <a href="#paper-envimedner"><strong>En-ViMedNER</strong></a> accepted to <strong class="news-conference">EMNLP 2026 Findings</strong>.</p>
                   <p><time datetime="2026-06">06/2026</time>: <a href="#paper-pida"><strong>PiDA</strong></a> and <a href="#paper-near-misses"><strong>LLM-generated Near-Misses</strong></a> accepted to <strong class="news-conference">Interspeech 2026</strong>.</p>
                   <p><time datetime="2026-02">02/2026</time>: <a href="#paper-vimedcss"><strong>ViMedCSS</strong></a> accepted to <strong class="news-conference">LREC 2026</strong>.</p>
                 </div>
@@ -264,6 +265,7 @@
           <p>
             Check out our published works:
             <ul>
+              <li><a href="#paper-envimedner" style="color: #3273dc; font-weight: 600; text-decoration: underline;">En-ViMedNER</a> (EMNLP Findings '26) – An English-Vietnamese Parallel Biomedical Corpus with UMLS Semantic Type Annotations</li>
               <li><a href="#paper-near-misses" style="color: #3273dc; font-weight: 600; text-decoration: underline;">LLM-generated near-misses</a> (Interspeech '26) – Contrastive training for robust code-switching speech recognition</li>
               <li><a href="#paper-pida" style="color: #3273dc; font-weight: 600; text-decoration: underline;">PiDA</a> (Interspeech '26) – Phonetically-informed data augmentation for robust Vietnamese speech translation</li>
               <li><a href="#paper-vimedcss" style="color: #3273dc; font-weight: 600; text-decoration: underline;">ViMedCSS dataset</a> (LREC '26) – Vietnamese Medical Code-Switching Speech dataset &amp; benchmark</li>
@@ -281,6 +283,52 @@
 <section class="section" id="publications">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Publications & Datasets</h2>
+    
+    <!-- Paper En-ViMedNER -->
+    <div class="box" id="paper-envimedner">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <h3 class="title is-4">En-ViMedNER: An English-Vietnamese Parallel Biomedical Corpus with UMLS Semantic Type Annotations</h3>
+          <p class="subtitle is-6">
+            <strong>Authors:</strong> Nhu Vo, Phuong Nguyen, Nu Uyen Phuong Le, Iñigo Jauregi Unanue, Dung D. Le, Massimo Piccardi, Wray Buntine<br>
+            <strong>Conference:</strong> EMNLP 2026 Findings
+          </p>
+          <button class="button is-small is-link is-light" onclick="toggleDescription('description-envimedner')" style="margin-bottom: 0.5rem;">
+            <span class="icon is-small"><i class="fas fa-chevron-down"></i></span>
+            <span class="toggle-text">Show Abstract</span>
+          </button>
+          <div id="description-envimedner" class="description-container" style="display: none;">
+          <p class="content">
+            Biomedical Named Entity Recognition (NER) is fundamental to healthcare AI applications, including clinical decision support and medical information extraction. While UMLS-annotated corpora such as MedMentions have driven progress in English biomedical NER, no comparable resource exists for Vietnamese. This paper presents En-ViMedNER, the first English-Vietnamese parallel biomedical NER corpus annotated with UMLS semantic types. The corpus contains 4,392 PubMed abstract pairs, 44,892 English-Vietnamese sentence pairs, and 202,949 aligned entity-mention pairs across 21 semantic types adapted from the MedMentions ST21pv dataset. To balance quality and scalability, we have constructed the corpus through automatic translation, expert post-editing, LLM-assisted label projection, and human verification and adjudication. We evaluate En-ViMedNER in two settings: (i) Vietnamese-input/Vietnamese-output biomedical NER and (ii) English-input/Vietnamese-output cross-lingual NER. For Vietnamese NER, we benchmark Vietnamese-supervised encoder models, English-supervised multilingual encoder models, and prompt-based LLMs. The best model achieves an F1 score of 52.70 on the test set and 53.78 on the mini-test set. For cross-lingual NER, we benchmark encoder-decoder models and prompt-based LLMs. The best model achieves an F1 score of 45.44 on the mini-test set. We publicly release our corpus, corpus construction pipeline, and baseline models to facilitate future Vietnamese biomedical NLP research. Given the semi-automated approach and the positive use cases of the corpus, we argue similar efforts should be made for some other low-resource languages.
+          </p>
+          </div>
+        </div>
+        <div class="column">
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div class="buttons is-centered" style="margin-bottom: 0;">
+              <button class="button is-dark" onclick="toggleBibTeX('bibtex-envimedner')">
+                <span class="icon"><i class="fas fa-quote-right"></i></span>
+                <span>BibTeX</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="bibtex-envimedner" class="bibtex-container" style="display: none;">
+        <div class="bibtex-header">
+          <button class="copy-bibtex-btn" onclick="copyBibTeXContent('bibtex-envimedner-code')" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-envimedner-code"><code>@inproceedings{vo2026envimedner,
+  title={En-ViMedNER: An English-Vietnamese Parallel Biomedical Corpus with UMLS Semantic Type Annotations},
+  author={Vo, Nhu and Nguyen, Phuong and Le, Nu Uyen Phuong and Iñigo Jauregi Unanue and Le, Dung D. and Piccardi, Massimo and Buntine, Wray},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year={2026}
+}</code></pre>
+      </div>
+    </div>
     
     <!-- Paper 1 -->
     <div class="box" id="paper-pida">
@@ -776,11 +824,11 @@
         <div class="team-member">
           <div class="box team-box">
             <figure class="image is-128x128 is-inline-block">
-              <img class="is-rounded" src="static/images/Inigo Jauregi Unanue.jpeg" alt="Dr. Inigo Jauregi Unanue">
+              <img class="is-rounded" src="static/images/Inigo Jauregi Unanue.jpeg" alt="Dr. Iñigo Jauregi Unanue">
             </figure>
             <h4 class="title is-5 mt-3">
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=o5X7jlgAAAAJ&hl=es" target="_blank">Dr. Inigo Jauregi Unanue</a>
+                <a href="https://scholar.google.com/citations?user=o5X7jlgAAAAJ&hl=es" target="_blank">Dr. Iñigo Jauregi Unanue</a>
               </span>
             </h4>
             <p class="subtitle is-6">University of Technology Sydney</p>
