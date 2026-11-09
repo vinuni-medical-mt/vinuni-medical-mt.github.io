@@ -284,6 +284,52 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Publications</h2>
 
+    <!-- Paper Negation Representations -->
+    <div class="box" id="not-lost-in-translation">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <h3 class="title is-4">"Not" is Not Lost in Translation: A Causal Analysis of Negation Representations in Multilingual LLMs</h3>
+          <p class="subtitle is-6">
+            <strong>Authors:</strong> Giang Son Nguyen, Wray Buntine, Dung D. Le, Wenya Wang<br>
+            <strong>Venue:</strong> <em>Under review</em>
+          </p>
+        </div>
+        <div class="column">
+          <div class="buttons is-centered">
+            <a href="https://arxiv.org/abs/2610.32281" target="_blank" class="button is-warning">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+            <a href="https://anonymous.4open.science/r/negation-translation/" target="_blank" class="button is-success">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Code</span>
+            </a>
+            <button class="button is-dark" onclick="toggleBibTeX('bibtex-negation-representations')">
+              <span class="icon"><i class="fas fa-quote-right"></i></span>
+              <span>BibTeX</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="bibtex-negation-representations" class="bibtex-container" style="display: none;">
+        <div class="bibtex-header">
+          <button class="copy-bibtex-btn" onclick="copyBibTeXContent('bibtex-negation-representations-code')" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-negation-representations-code"><code>@misc{nguyen2026notlosttranslationcausal,
+    title = {"Not" is Not Lost in Translation: A Causal Analysis of Negation Representations in Multilingual LLMs},
+    author = {Giang Son Nguyen and Wray Buntine and Dung D. Le and Wenya Wang},
+    year = {2026},
+    eprint = {2610.32281},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.CL},
+    url = {https://arxiv.org/abs/2610.32281},
+}</code></pre>
+      </div>
+    </div>
+
     <!-- Paper SAE Translation Features -->
     <div class="box" id="recurrence-is-not-enough">
       <div class="columns">
@@ -291,7 +337,7 @@
           <h3 class="title is-4">Recurrence Is Not Enough: Causally Validating Multilingual SAE Translation Features in Gemma 2 and 3</h3>
           <p class="subtitle is-6">
             <strong>Authors:</strong> Giang Son Nguyen, Nhi Ngoc-Yen Nguyen, Wray Buntine, Dung D. Le<br>
-            <strong>Venue:</strong> BlackboxNLP 2026 Special Track
+            <strong>Venue:</strong> BlackboxNLP @ EMNLP 2026
           </p>
           <button class="button is-small is-link is-light" onclick="toggleDescription('description-sae-translation')" style="margin-bottom: 0.5rem;">
             <span class="icon is-small"><i class="fas fa-chevron-down"></i></span>
@@ -340,7 +386,7 @@
           </button>
         </div>
         <pre id="bibtex-sae-translation-code"><code>@inproceedings{nguyen-etal-2026-recurrence,
-    title = "Recurrence Is Not Enough: Causally Validating Multilingual {SAE} Translation Features in {Gemma} 2 and 3",
+    title = "Recurrence Is Not Enough: Causally Validating Multilingual {SAE} Translation Features in Gemma 2 and 3",
     author = "Nguyen, Giang Son  and
       Nguyen, Nhi Ngoc-Yen  and
       Buntine, Wray  and
@@ -359,8 +405,9 @@
     address = "Budapest, Hungary",
     publisher = "Association for Computational Linguistics",
     url = "https://aclanthology.org/2026.blackboxnlp-1.61/",
+    doi = "10.18653/2026.blackboxnlp-1.61",
     pages = "1100--1112",
-    ISBN = "979-8-89176-476-7"
+    ISBN = "979-8-89176-476-7",
 }</code></pre>
       </div>
     </div>
@@ -419,8 +466,8 @@
             <span class="copy-text">Copy</span>
           </button>
         </div>
-        <pre id="bibtex-envimedner-code"><code>@inproceedings{vo-etal-2026-en-vimedner,
-    title = "{E}n-{V}i{M}ed{NER}: An {E}nglish-{V}ietnamese Parallel Biomedical Corpus with {UMLS} Semantic Type Annotations",
+        <pre id="bibtex-envimedner-code"><code>@inproceedings{vo-etal-2026-en,
+    title = "En-{V}i{M}ed{NER}: An {E}nglish-{V}ietnamese Parallel Biomedical Corpus with {UMLS} Semantic Type Annotations",
     author = "Vo, Nhu  and
       Nguyen, Phuong  and
       Le, Nu Uyen Phuong  and
@@ -438,8 +485,9 @@
     address = "Budapest, Hungary",
     publisher = "Association for Computational Linguistics",
     url = "https://aclanthology.org/2026.findings-emnlp.2392/",
+    doi = "10.18653/2026.findings-emnlp.2392",
     pages = "51397--51418",
-    ISBN = "979-8-89176-462-0"
+    ISBN = "979-8-89176-462-0",
 }</code></pre>
       </div>
     </div>
