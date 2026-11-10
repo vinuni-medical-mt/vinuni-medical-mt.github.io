@@ -481,7 +481,7 @@ body {
   font-size: 0.8125rem !important;
 }
 
-#publications .box > .subtitle {
+#publications .publication-entry-authors {
   margin-bottom: 0;
   line-height: 1.65;
 }
@@ -518,6 +518,72 @@ body {
   #publications .publication-actions .button {
     padding: 0.4rem 0.65rem !important;
   }
+}
+
+/* Year groups retain the site's card and button styling. */
+#publications .publication-group + .publication-group {
+  margin-top: 3rem;
+}
+
+#publications .publication-group-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#publications .publication-group-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--border-color);
+}
+
+#publications .publication-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#publications .publication-entry {
+  scroll-margin-top: 2rem;
+}
+
+#publications .publication-entry-venue {
+  display: inline-block;
+  margin: 0 0 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--border-radius);
+  background: #eff6ff;
+  color: var(--primary-hover);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+#publications .publication-entry-venue.is-preprint {
+  border-color: #fde68a;
+  background: #fffbeb;
+  color: #92400e;
+}
+
+#publications .publication-entry-title {
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+#publications .publication-entry-authors {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+#publications .publication-actions .abstract-toggle {
+  margin: 0 !important;
+  padding: 0.4rem 0.8rem !important;
+  font-size: 0.8125rem !important;
 }
 
 /* Modern Video and Carousel Styling */

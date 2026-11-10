@@ -150,13 +150,15 @@ function toggleBibTeX(bibtexId) {
         } else {
             bibtexContainer.style.display = 'none';
         }
+        const button = document.querySelector(`[aria-controls="${bibtexId}"]`);
+        if (button) button.setAttribute('aria-expanded', String(bibtexContainer.style.display !== 'none'));
     }
 }
 
 // Toggle paper description visibility
 function toggleDescription(descriptionId) {
     const descContainer = document.getElementById(descriptionId);
-    const button = event.target.closest('button');
+    const button = document.querySelector(`[aria-controls="${descriptionId}"]`) || event.target.closest('button');
     const icon = button.querySelector('i');
     const toggleText = button.querySelector('.toggle-text');
     
@@ -172,6 +174,7 @@ function toggleDescription(descriptionId) {
             icon.classList.add('fa-chevron-down');
             toggleText.textContent = 'Show Abstract';
         }
+        button.setAttribute('aria-expanded', String(descContainer.style.display !== 'none'));
     }
 }
 
