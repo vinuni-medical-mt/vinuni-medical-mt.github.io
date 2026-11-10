@@ -467,17 +467,17 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0 0;
+  gap: 0.375rem;
+  margin: 0.75rem 0 0;
 }
 
 #publications .publication-actions .button {
   flex: 0 0 auto;
   width: auto;
-  min-height: 36px;
+  min-height: 32px;
   height: auto;
   margin: 0 !important;
-  padding: 0.4rem 0.8rem !important;
+  padding: 0.25rem 0.6rem !important;
   font-size: 0.8125rem !important;
 }
 
@@ -516,7 +516,7 @@ body {
   }
 
   #publications .publication-actions .button {
-    padding: 0.4rem 0.65rem !important;
+    padding: 0.25rem 0.6rem !important;
   }
 }
 
@@ -571,7 +571,8 @@ body {
 }
 
 #publications .publication-entry-title {
-  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
   line-height: 1.35;
 }
 
@@ -582,8 +583,21 @@ body {
 
 #publications .publication-actions .abstract-toggle {
   margin: 0 !important;
-  padding: 0.4rem 0.8rem !important;
+  padding: 0.25rem 0.6rem !important;
   font-size: 0.8125rem !important;
+}
+
+#publications .publication-actions .button .icon {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.35rem 0 0 !important;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  #publications .publication-entry-title {
+    font-size: 1.125rem;
+  }
 }
 
 /* Modern Video and Carousel Styling */
