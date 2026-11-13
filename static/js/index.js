@@ -295,3 +295,44 @@ document.addEventListener('keydown', function(event) {
         closeImageModal();
     }
 });
+
+// Match the prototype's typewriter demo while the preview is visible.
+document.addEventListener('DOMContentLoaded', function() {
+    const preview = document.querySelector('.medcomms-preview');
+    if (!preview) return;
+    const source = preview.querySelector('[data-medcomms-source]');
+    const target = preview.querySelector('[data-medcomms-target]');
+    const said = source.textContent;
+    const translated = target.textContent;
+    const total = said.length + translated.length;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let timer;
+    let visible = false;
+
+    function updateDemo() {
+        clearInterval(timer);
+        source.classList.remove('is-typing');
+        target.classList.remove('is-typing');
+        source.textContent = said;
+        target.textContent = translated;
+        if (motion.matches || !visible || document.hidden) return;
+        let step = 0;
+        function tick() {
+            const n = step++ % (total + 40);
+            source.textContent = said.slice(0, Math.min(n, said.length));
+            target.textContent = translated.slice(0, Math.max(0, n - said.length));
+            source.classList.toggle('is-typing', n <= said.length);
+            target.classList.toggle('is-typing', n > said.length && n <= total);
+        }
+        tick();
+        timer = setInterval(tick, 55);
+    }
+
+    const observer = new IntersectionObserver(function(entries) {
+        visible = entries[0].isIntersecting;
+        updateDemo();
+    });
+    observer.observe(preview);
+    motion.addEventListener('change', updateDemo);
+    document.addEventListener('visibilitychange', updateDemo);
+});
